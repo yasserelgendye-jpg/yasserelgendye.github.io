@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ندوشتي 🥹💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Great+Vibes&display=swap');
+*{box-sizing:border-box} body{margin:0;font-family:Cairo,Arial,sans-serif;background:linear-gradient(135deg,#fff5f7,#ffe4eb);color:#35131b}
+.hidden{display:none!important}.screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:22px}
+.login{width:min(430px,100%);background:#ffffffd9;backdrop-filter:blur(12px);padding:35px 25px;border-radius:30px;box-shadow:0 20px 60px #8b203522;text-align:center}
+.heart{font-size:58px;animation:pulse 1.4s infinite}@keyframes pulse{50%{transform:scale(1.12)}}
+h1{margin:8px 0;color:#a30f2f;font-size:34px}.sub{color:#7d4a54}
+input{width:100%;padding:15px;border:2px solid #f0b5c2;border-radius:16px;font-size:18px;text-align:center;outline:none;margin:15px 0}
+button{border:0;background:#a30f2f;color:white;padding:14px 24px;border-radius:16px;font-size:17px;font-family:inherit;cursor:pointer;box-shadow:0 8px 20px #a30f2f33}
+#error{color:#b00020;margin-top:10px}.wrap{max-width:1050px;margin:auto;padding:25px 18px 60px}
+.hero{text-align:center;padding:50px 10px 35px}.hero h1{font-size:58px;margin:0}.script{font-family:"Great Vibes",cursive;font-size:36px;color:#a30f2f}
+.card{background:#ffffffc9;backdrop-filter:blur(10px);border:1px solid #fff;border-radius:28px;padding:24px;margin:22px 0;box-shadow:0 15px 40px #7b18321c}
+h2{color:#9c0d2c;margin-top:0}.message{font-size:20px;line-height:2;text-align:center}
+.counter{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.unit{background:#fff0f4;border-radius:18px;padding:16px;text-align:center}.num{font-size:30px;font-weight:800;color:#a30f2f;display:block}.label{font-size:13px}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.photo{aspect-ratio:1/1;overflow:hidden;border-radius:20px;background:#f7cbd5;position:relative}.photo img{width:100%;height:100%;object-fit:cover}.ph{height:100%;display:flex;align-items:center;justify-content:center;color:#8d4051;font-weight:700}
+.youtube{position:relative;padding-top:56.25%;border-radius:20px;overflow:hidden;background:#111}.youtube iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+footer{text-align:center;color:#8a5962;margin-top:35px}
+@media(min-width:700px){.gallery{grid-template-columns:repeat(5,1fr)}}
+</style>
+</head>
+<body>
+<div id="login" class="screen">
+  <div class="login">
+    <div class="heart">💗</div>
+    <h1>ندوشتي 🥹</h1>
+    <p class="sub">المكان ده معمول مخصوص ليكي...</p>
+    <input id="pass" type="password" inputmode="numeric" placeholder="اكتبي الباسورد 💗">
+    <button onclick="enter()">ادخلي يا حبيبتي ✨</button>
+    <div id="error"></div>
+  </div>
+</div>
+
+<main id="site" class="hidden">
+<div class="wrap">
+  <section class="hero">
+    <div class="script">To my favorite person</div>
+    <h1>ندوشتي 🥹💗</h1>
+    <p>كل لحظة معاكي تستاهل تتحفظ.</p>
+  </section>
+
+  <section class="card">
+    <h2>⏳ بقالنا قد إيه؟</h2>
+    <div class="counter">
+      <div class="unit"><span class="num" id="days">0</span><span class="label">يوم</span></div>
+      <div class="unit"><span class="num" id="hours">0</span><span class="label">ساعة</span></div>
+      <div class="unit"><span class="num" id="mins">0</span><span class="label">دقيقة</span></div>
+      <div class="unit"><span class="num" id="secs">0</span><span class="label">ثانية</span></div>
+    </div>
+    <p style="text-align:center">من يوم <b>17 / 9 / 2026</b> ❤️</p>
+  </section>
+
+  <section class="card">
+    <h2>📸 ذكرياتنا</h2>
+    <div class="gallery">
+      <div class="photo"><div class="ph">الصورة 1</div></div>
+      <div class="photo"><div class="ph">الصورة 2</div></div>
+      <div class="photo"><div class="ph">الصورة 3</div></div>
+      <div class="photo"><div class="ph">الصورة 4</div></div>
+      <div class="photo"><div class="ph">الصورة 5</div></div>
+      <div class="photo"><div class="ph">الصورة 6</div></div>
+      <div class="photo"><div class="ph">الصورة 7</div></div>
+      <div class="photo"><div class="ph">الصورة 8</div></div>
+      <div class="photo"><div class="ph">الصورة 9</div></div>
+      <div class="photo"><div class="ph">الصورة 10</div></div>
+    </div>
+    <p style="text-align:center;color:#7d4a54">لما تبعتلي الصور العشرة، تتحط مكان الخانات دي ❤️</p>
+  </section>
+
+  <section class="card">
+    <h2>🎵 أغنيتنا</h2>
+    <p>«متقلقش» — عمرو دياب</p>
+    <div class="youtube">
+      <iframe src="https://www.youtube.com/embed/5IxYjI3Q6_A" title="متقلقش - عمرو دياب" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p style="font-size:13px;color:#7d4a54">الأغنية مضمّنة من يوتيوب، لذلك تشغيلها يعتمد على توفر الفيديو وسياسات يوتيوب.</p>
+  </section>
+
+  <section class="card">
+    <h2>💌 حاجات بحبها فيكي</h2>
+    <p class="message">
+      عايز أقولك إن كل حاجة فيكي أنا بحبها، بحب كل تفصيلة فيكي، بحبك كلك على بعضك،
+      بحب ضحكتك وحنّيتك عليا وخوفك واهتمامك. بحبك وهفضل أحبك لآخر العمر،
+      عايز أكمل عمري معاكي. بحبك يا ندوشتي 🥹💗💗
+    </p>
+  </section>
+
+  <footer>اتعملت بحب... مخصوص لندوشتي ❤️</footer>
+</div>
+</main>
+
+<script>
+const PASSWORD="1616";
+function enter(){
+  const v=document.getElementById('pass').value;
+  if(v===PASSWORD){
+    document.getElementById('login').classList.add('hidden');
+    document.getElementById('site').classList.remove('hidden');
+    localStorage.setItem('nadoushUnlocked','1');
+  }else document.getElementById('error').textContent="الباسورد مش صح يا حبيبتي 🥹";
+}
+document.getElementById('pass').addEventListener('keydown',e=>{if(e.key==='Enter')enter()});
+
+const start=new Date('2026-09-17T00:00:00');
+function update(){
+  let d=Date.now()-start.getTime(); if(d<0)d=0;
+  let s=Math.floor(d/1000);
+  document.getElementById('days').textContent=Math.floor(s/86400);
+  s%=86400; document.getElementById('hours').textContent=Math.floor(s/3600);
+  s%=3600; document.getElementById('mins').textContent=Math.floor(s/60);
+  document.getElementById('secs').textContent=s%60;
+}
+setInterval(update,1000); update();
+</script>
+</body>
+</html>
