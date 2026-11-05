@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#a5123c">
+<title>ندوشتي🥹♥️ | My Everything</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--red:#a5123c;--deep:#710d2b;--pink:#ffe3eb;--rose:#d94b70;--cream:#fff8f5;--ink:#56323d}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Cairo',sans-serif;background:radial-gradient(circle at top,#ffe7ed,#fff8f5 55%,#f9e8e5);color:var(--ink);min-height:100vh;overflow-x:hidden}
+button,input{font:inherit}
+.wrap{width:min(100%,520px);min-height:100vh;margin:auto;background:rgba(255,250,248,.86);box-shadow:0 0 35px #7c1a3214;position:relative;padding-bottom:100px}
+.hidden{display:none!important}
+.lock{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:25px;background:linear-gradient(145deg,#fff6f5,#ffe1e9)}
+.lock-heart{font-size:58px;animation:pulse 1.5s infinite}
+.letter{width:min(100%,330px);padding:27px 20px 23px;background:#fff;border:1px solid #f3cbd5;border-radius:18px;box-shadow:0 14px 35px #8e18301c;margin:18px 0 25px;position:relative}
+.letter:before{content:"";position:absolute;inset:9px;border:1px dashed #edb7c4;border-radius:12px;pointer-events:none}
+.script{font-family:'Great Vibes',cursive;color:var(--red);font-size:40px;direction:ltr}
+.lock p{font-size:14px;color:#805965;margin:8px 0 15px}
+.password{width:min(100%,290px);padding:13px 18px;border:1px solid #e6b9c5;border-radius:30px;background:#fff;text-align:center;outline:none}
+.btn{border:0;border-radius:30px;padding:12px 27px;background:linear-gradient(135deg,var(--red),#d84c72);color:white;font-weight:700;cursor:pointer;box-shadow:0 7px 17px #a5123c30;transition:.2s}
+.btn:active{transform:scale(.97)}
+.error{min-height:22px;color:#b00035;font-size:13px;margin-top:8px}
+.hero{padding:38px 22px 30px;text-align:center;background:linear-gradient(145deg,#8d0d32,#c72c58);color:white;border-radius:0 0 34px 34px;position:relative;overflow:hidden}
+.hero:after{content:"♡";position:absolute;font-size:170px;opacity:.08;left:10px;bottom:-70px}
+.hero .script{color:#ffe5eb;font-size:37px}
+.hero h1{font-size:29px;margin:7px 0}
+.hero p{font-size:14px;line-height:2;max-width:390px;margin:auto;color:#ffeaf0}
+.content{padding:20px;display:grid;gap:19px}
+.card{background:#fff;border:1px solid #f3dce1;border-radius:22px;padding:21px 17px;box-shadow:0 8px 25px #7c1a320b;text-align:center}
+.section-title{font-size:20px;color:var(--red);margin-bottom:12px}
+.intro{line-height:2.1;font-size:15px}
+.timer{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:17px 0}
+.unit{background:#fff1f4;border:1px solid #f7d4de;border-radius:14px;padding:12px 3px}
+.unit strong{display:block;color:var(--red);font-size:23px;line-height:1.5}
+.unit span{font-size:11px;color:#956a76}
+.tiny{font-size:12px;color:#a06b7b}
+.love-list{display:grid;gap:10px;text-align:right}
+.love-item{background:#fff5f7;border-radius:13px;padding:11px 13px;line-height:1.9;border-right:3px solid #d94b70}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.photo{border-radius:16px;overflow:hidden;background:linear-gradient(145deg,#ffe0e8,#f7b8c8);border:5px solid white;box-shadow:0 5px 15px #6c20301a;min-height:175px;position:relative}
+.photo img{width:100%;height:175px;object-fit:cover;display:block}
+.photo img:not([src]),.photo img[src=""]{display:none}
+.photo figcaption{padding:9px 5px;background:#fff;color:#754653;font-size:12px}
+.photo .placeholder{height:175px;display:flex;align-items:center;justify-content:center;font-size:42px;color:#b23d61}
+.song-frame{width:100%;aspect-ratio:16/9;border:0;border-radius:15px;background:#f8e3e8}
+.song-note{font-size:12px;color:#96717a;margin-top:9px}
+.promise{font-size:16px;line-height:2.2;color:#754653}
+.footer{text-align:center;color:#a36d7a;font-size:12px;padding:0 20px 25px}
+.music-bar{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:min(calc(100% - 24px),490px);background:#fffdfdF2;border:1px solid #f0cbd5;border-radius:30px;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 8px 28px #57102725;z-index:5;backdrop-filter:blur(10px)}
+.music-label{font-size:12px;font-weight:700;color:var(--red)}
+.music-bar button{border:0;background:var(--red);color:#fff;border-radius:50%;width:39px;height:39px;font-size:17px}
+.float-heart{position:fixed;bottom:-30px;z-index:10;pointer-events:none;animation:rise 5s linear forwards;color:#d92e61}
+@keyframes pulse{50%{transform:scale(1.13)}}
+@keyframes rise{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+@media(max-width:360px){.content{padding:14px}.timer{gap:5px}.unit strong{font-size:19px}.hero h1{font-size:25px}}
+
+/* الإضافات الجديدة */
+.extra-card{background:linear-gradient(145deg,#fffafd,#fff3f8);border:1px solid #f2dce8;border-radius:25px;padding:22px 17px;box-shadow:0 8px 25px #7c1a320b;text-align:center}
+.extra-title{font-size:21px;color:#9b80b4;margin-bottom:12px}
+.heart-message-box{padding:18px 10px 10px;min-height:112px;display:flex;align-items:center;justify-content:center;color:#9878aa;font-size:18px;font-weight:700;line-height:2}
+.message-next{border:0;border-radius:40px;padding:14px 34px;background:linear-gradient(135deg,#cf83b4,#a77fc1);color:white;font-weight:700;font-size:17px;box-shadow:0 8px 20px #a77fc133;cursor:pointer}
+.message-note{color:#a17eaa;font-weight:700;margin-top:17px}
+.love-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.love-action{border:1px solid #f0dce9;border-radius:20px;padding:17px 8px;background:#fff9fc;color:#9878aa;cursor:pointer;font-weight:700;font-size:15px}
+.love-action:active{transform:scale(.97)}
+.love-action .emoji{display:block;font-size:35px;margin-bottom:5px}
+.love-action strong{display:block;font-size:30px;color:#9b80b4;font-weight:700}
+.love-action small{display:block;margin-top:5px;color:#9b849d}
+.score-title{font-size:19px;color:#9b80b4;margin:20px 0 10px}
+.score-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.score-item{border:1px solid #f1dfeb;background:#fffafd;border-radius:17px;padding:13px 7px;color:#987e9d;font-size:13px}
+.score-item strong{display:block;color:#9b80b4;font-size:25px;margin:4px}
+.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.video-memory{border:1px solid #f0dce8;border-radius:18px;background:#fff;padding:10px;overflow:hidden}
+.video-memory video{width:100%;aspect-ratio:9/16;max-height:260px;object-fit:cover;border-radius:13px;background:linear-gradient(145deg,#393939,#111);display:block}
+.video-memory p{font-size:13px;color:#987e9d;line-height:1.9;padding:9px 2px 3px}
+.video-hint{font-size:12px;color:#a17eaa;line-height:1.9;margin-top:12px}
+@media(max-width:360px){.extra-card{padding:17px 12px}.video-grid{gap:8px}.video-memory{padding:7px}.love-action{font-size:13px}}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<section id="lockScreen" class="lock">
+<div class="lock-heart">💗</div>
+<div class="letter"><div style="font-size:12px;letter-spacing:4px;color:#b66c80">A LITTLE LOVE LETTER</div><div class="script">My Everything</div><div style="font-size:30px;margin-top:5px">💌</div></div>
+<h2 style="color:#8d1538">إلى ندوشتي 🥹♥️</h2>
+<p>في رسالة صغيرة مستنياكي… دخّلي كلمة السر وافتحيها ❤️</p>
+<input id="passwordInput" class="password" type="password" inputmode="numeric" placeholder="كلمة السر">
+<div style="height:14px"></div>
+<button class="btn" onclick="unlock()">افتحي رسالتك 🗝️</button>
+<div id="error" class="error" aria-live="polite"></div>
+</section>
+<main id="mainContent" class="hidden">
+<header class="hero"><div class="script">To my one and only</div><h1>ندوشتي🥹♥️</h1><p>كل حاجة حلوة في الدنيا بتفكرني بيكي… ودي مساحة صغيرة أقولك فيها قد إيه إنتي غالية عندي ❤️</p><div style="font-size:25px;margin-top:12px">♡ ♡ ♡</div></header>
+<div class="content">
+<section class="card"><h2 class="section-title">رسالة ليكي 💌</h2><p class="intro">عملتلك الموقع ده عشان يفضل ذكرى حلوة بينا، وكل ثانية بتعدي وإنتي في حياتي بتخليني أحمد ربنا عليكي. يا رب نفضل سوا ونعيش حكايات كتير أحلى من اللي فاتت. بحبك يا ندوشتي ❤️</p></section>
+<section class="card"><h2 class="section-title">بدايتنا سوا 💖</h2><p class="tiny">من يوم 17 / 9 / 2026</p><div class="timer" aria-live="polite"><div class="unit"><strong id="days">0</strong><span>يوم</span></div><div class="unit"><strong id="hours">0</strong><span>ساعة</span></div><div class="unit"><strong id="minutes">0</strong><span>دقيقة</span></div><div class="unit"><strong id="seconds">0</strong><span>ثانية</span></div></div><p class="tiny">وكل ثانية جاية هتبقى أحلى وإنتي معايا 💕</p></section>
+<section class="card"><h2 class="section-title">حاجات بحبها فيكي 🥹</h2><div class="love-list"><p class="love-item">عايز اقولك ان كل حاجه فيكي انا بحبها بحب كل تفصيله فيكي بحبك كلك علي بعضك بحب ضحكتك وحنيتك عليا وخوفك واهتمام بحبك وهفضل احبك لاخر العمر عايز اكمل عمري معاكي بحبك يا ندوشتي 🥹♥️♥️</p></div></section>
+<section class="card"><h2 class="section-title">ألبوم ذكرياتنا 📸</h2><p class="tiny" style="margin-bottom:14px">كل صورة ليها حكاية… حطي صوركم مكان الصور التجريبية 💗</p><div class="gallery" id="gallery">
+<figure class="photo"><div class="placeholder">📷</div><img src="images/photo1.jpg" alt="ذكرى 1" onerror="this.remove()"><figcaption>أحلى ذكرى 1 ❤️</figcaption></figure>
+<figure class="photo"><div class="placeholder">📷</div><img src="images/photo2.jpg" alt="ذكرى 2" onerror="this.remove()"><figcaption>أحلى ذكرى 2 ❤️</figcaption></figure>
+<figure class="photo"><div class="placeholder">📷</div><img src="images/photo3.jpg" alt="ذكرى 3" onerror="this.remove()"><figcaption>أحلى ذكرى 3 ❤️</figcaption></figure>
+<figure class="photo"><div class="placeholder">📷</div><img src="images/photo4.jpg" alt="ذكرى 4" onerror="this.remove()"><figcaption>أحلى ذكرى 4 ❤️</figcaption></figure>
+<figure class="photo"><div class="placeholder">📷</div><img src="images/photo5.jpg" alt="ذكرى 5" onerror="this.remove()"><figcaption>أحلى ذكرى 5 ❤️</figcaption></figure>
+<figure class="photo"><div class="placeholder">📷</div><img src="images/photo6.jpg" alt="ذكرى 6" onerror="this.remove()"><figcaption>أحلى ذكرى 6 ❤️</figcaption></figure>
+<figure class="photo"><div class="placeholder">📷</div><img src="images/photo7.jpg" alt="ذكرى 7" onerror="this.remove()"><figcaption>أحلى ذكرى 7 ❤️</figcaption></figure>
+<figure class="photo"><div class="placeholder">📷</div><img src="images/photo8.jpg" alt="ذكرى 8" onerror="this.remove()"><figcaption>أحلى ذكرى 8 ❤️</figcaption></figure>
+<figure class="photo"><div class="placeholder">📷</div><img src="images/photo9.jpg" alt="ذكرى 9" onerror="this.remove()"><figcaption>أحلى ذكرى 9 ❤️</figcaption></figure>
+<figure class="photo"><div class="placeholder">📷</div><img src="images/photo10.jpg" alt="ذكرى 10" onerror="this.remove()"><figcaption>أحلى ذكرى 10 ❤️</figcaption></figure>
+</div></section>
+<section class="card"><h2 class="section-title">أغنيتنا 🎶</h2><p style="margin-bottom:12px;font-weight:700;color:#754653">عمرو دياب – ما تقلقش ❤️</p><iframe class="song-frame" src="https://www.youtube-nocookie.com/embed/Hqw5Cd9_8tw?rel=0" title="عمرو دياب - ما تقلقش" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="song-note">اضغطي تشغيل من الفيديو لسماع الأغنية. قد تحتاجي فتح يوتيوب لو التضمين غير متاح.</p></section>
+<section class="card"><h2 class="section-title">وعد مني ليكي ❤️</h2><p class="promise">هفضل أختارك كل يوم، وأحافظ على ضحكتك على قد ما أقدر، وأفضل جنبك في الحلوة والمرة. إنتي حبيبتي وأجمل حكاية في عمري 🥹💗</p><div style="font-size:30px;margin-top:12px">💞</div></section>
+
+<section class="extra-card">
+ <h2 class="extra-title">💌 رسالة من القلب 🥂</h2>
+ <p style="color:#a18ba7;line-height:2">كل مرة افتحي رسالة، هتلاقي كلمة حلوة مخصوص ليكي 💗</p>
+ <div id="heartMessage" class="heart-message-box" aria-live="polite">هفضل أختارك كل يوم من جديد 🥹♥️</div>
+ <button class="message-next" type="button" onclick="showLoveMessage()">رسالة تانية</button>
+ <p class="message-note">هفضل أختارك كل يوم من جديد ♾️</p>
+</section>
+
+<section class="extra-card" id="loveCounterSection">
+ <h2 class="extra-title">❤️ كلمة حب بتفرق</h2>
+ <p style="color:#a18ba7;line-height:2">كل مرة تقولوا «بحبك» أو «وحشتني» سجلوها هنا، وخلي الكلمات الحلوة تزيد ❤️</p>
+ <div class="love-actions">
+  <button class="love-action" type="button" onclick="recordLove('meLove')"><span class="emoji">❤️</span><strong id="totalLoveCount">0</strong>بحبك هنا</button>
+  <button class="love-action" type="button" onclick="recordLove('meMiss')"><span class="emoji">🥺</span><strong id="totalMissCount">0</strong>وحشتني هنا</button>
+ </div>
+ <h3 class="score-title">مين بيحب التاني أكتر؟ 👀❤️</h3>
+ <p style="color:#b09bad;font-size:13px;margin-bottom:13px">كل ضغطة بتتحسب، والأرقام بتفضل محفوظة على نفس الجهاز</p>
+ <div class="score-grid">
+  <button class="score-item" type="button" onclick="recordLove('meLove')">❤️ أنا قلت «بحبك»<strong id="meLoveCount">0</strong>مرة</button>
+  <button class="score-item" type="button" onclick="recordLove('herLove')">💕 الطرف التاني قال «بحبك»<strong id="herLoveCount">0</strong>مرة</button>
+  <button class="score-item" type="button" onclick="recordLove('meMiss')">🥺 أنا قلت «وحشتني»<strong id="meMissCount">0</strong>مرة</button>
+  <button class="score-item" type="button" onclick="recordLove('herMiss')">🥺 الطرف التاني قال «وحشتني»<strong id="herMissCount">0</strong>مرة</button>
+ </div>
+</section>
+
+<section class="extra-card">
+ <h2 class="extra-title">🎥 فيديوهات لحظاتنا</h2>
+ <p style="color:#b09bad;line-height:2">ذكرياتنا المتحركة 🤍✨</p>
+ <div class="video-grid">
+  <div class="video-memory"><video controls playsinline preload="metadata"><source src="videos/video1.mp4" type="video/mp4">المتصفح لا يدعم تشغيل الفيديو.</video><p>🎥 يوم من الأيام اللي نفسي أعيشها معاكي تاني 💕</p></div>
+  <div class="video-memory"><video controls playsinline preload="metadata"><source src="videos/video2.mp4" type="video/mp4">المتصفح لا يدعم تشغيل الفيديو.</video><p>🎥 أجمل ضحكة في الدنيا ❤️</p></div>
+  <div class="video-memory"><video controls playsinline preload="metadata"><source src="videos/video3.mp4" type="video/mp4">المتصفح لا يدعم تشغيل الفيديو.</video><p>🎥 لحظة عفوية هتفضل ذكرى جميلة 💗</p></div>
+  <div class="video-memory"><video controls playsinline preload="metadata"><source src="videos/video4.mp4" type="video/mp4">المتصفح لا يدعم تشغيل الفيديو.</video><p>🎥 إنتي على طول في قلبي ❤️</p></div>
+ </div>
+ <p class="video-hint">لتشغيل الفيديوهات، ضعي ملفاتك داخل مجلد <b>videos</b> وسميها video1.mp4 وvideo2.mp4 وvideo3.mp4 وvideo4.mp4.</p>
+</section>
+
+</div>
+<footer class="footer">اتعمل بكل الحب لندوشتي 🥹♥️<br>Forever starts with you ♡</footer>
+</main>
+</div>
+<div id="musicBar" class="music-bar hidden"><div><div class="music-label">ندوشتي🥹♥️</div><div style="font-size:11px;color:#98717c">أغنيتنا: ما تقلقش</div></div><button onclick="document.querySelector('.song-frame').scrollIntoView({behavior:'smooth',block:'center'})" aria-label="اذهب للأغنية">♫</button></div>
+<script>
+const SECRET_PASSWORD = "1616";
+const startDate = new Date(2026, 8, 17, 0, 0, 0); // 17 سبتمبر 2026
+let counterInterval;
+function unlock(){
+ const value=document.getElementById('passwordInput').value.trim();
+ const error=document.getElementById('error');
+ if(value!==SECRET_PASSWORD){error.textContent="كلمة السر مش صح، جربي تاني يا ندوشتي ❤️";return;}
+ document.getElementById('lockScreen').classList.add('hidden');
+ document.getElementById('mainContent').classList.remove('hidden');
+ document.getElementById('musicBar').classList.remove('hidden');
+ startCounter();
+ for(let i=0;i<9;i++)setTimeout(createHeart,i*180);
+}
+document.getElementById('passwordInput').addEventListener('keydown',e=>{if(e.key==='Enter')unlock();});
+function startCounter(){updateCounter();clearInterval(counterInterval);counterInterval=setInterval(updateCounter,1000);}
+function updateCounter(){
+ let diff=Date.now()-startDate.getTime();if(diff<0)diff=0;
+ const day=86400000,hour=3600000,minute=60000;
+ document.getElementById('days').textContent=Math.floor(diff/day);
+ document.getElementById('hours').textContent=Math.floor((diff%day)/hour);
+ document.getElementById('minutes').textContent=Math.floor((diff%hour)/minute);
+ document.getElementById('seconds').textContent=Math.floor((diff%minute)/1000);
+}
+function createHeart(){
+ const heart=document.createElement('div');heart.className='float-heart';
+ heart.textContent=['❤','💗','💕','♡'][Math.floor(Math.random()*4)];
+ heart.style.left=Math.random()*100+'vw';heart.style.fontSize=(16+Math.random()*18)+'px';
+ document.body.appendChild(heart);setTimeout(()=>heart.remove(),5100);
+}
+
+const loveMessages = [
+ "هفضل أختارك كل يوم من جديد 🥹♥️",
+ "هفضل أحبك لآخر العمر يا بنوتي 🥹♥️",
+ "كل يوم بحبك أكتر عن اليوم اللي قبله يا ندوشتي 🥹",
+ "هفضل جنبك لآخر نفس في عمري 🥹♥️",
+ "بحبكك يا بنوتي 🥹♥️♥️"
+];
+let previousMessageIndex = 0;
+function showLoveMessage(){
+ let nextIndex;
+ do { nextIndex = Math.floor(Math.random()*loveMessages.length); }
+ while(loveMessages.length > 1 && nextIndex === previousMessageIndex);
+ previousMessageIndex = nextIndex;
+ document.getElementById('heartMessage').textContent = loveMessages[nextIndex];
+}
+const LOVE_STORAGE_KEY = 'rahomty_love_counts_v1';
+const emptyLoveCounts = {meLove:0,herLove:0,meMiss:0,herMiss:0};
+function readLoveCounts(){
+ try{
+  const saved = JSON.parse(localStorage.getItem(LOVE_STORAGE_KEY) || '{}');
+  return {...emptyLoveCounts,...saved};
+ }catch(e){return {...emptyLoveCounts};}
+}
+let loveCounts = readLoveCounts();
+function saveLoveCounts(){
+ try{localStorage.setItem(LOVE_STORAGE_KEY,JSON.stringify(loveCounts));}
+ catch(e){console.warn('تعذر حفظ العدادات على هذا المتصفح',e);}
+}
+function renderLoveCounts(){
+ const ids = ['meLove','herLove','meMiss','herMiss'];
+ ids.forEach(key=>{
+  const el=document.getElementById(key+'Count');
+  if(el)el.textContent=loveCounts[key]||0;
+ });
+ const loveTotal=(loveCounts.meLove||0)+(loveCounts.herLove||0);
+ const missTotal=(loveCounts.meMiss||0)+(loveCounts.herMiss||0);
+ document.getElementById('totalLoveCount').textContent=loveTotal;
+ document.getElementById('totalMissCount').textContent=missTotal;
+}
+function recordLove(key){
+ if(!Object.prototype.hasOwnProperty.call(emptyLoveCounts,key))return;
+ loveCounts[key]=(Number(loveCounts[key])||0)+1;
+ saveLoveCounts();
+ renderLoveCounts();
+}
+renderLoveCounts();
+
+</script>
+</body>
+</html>
